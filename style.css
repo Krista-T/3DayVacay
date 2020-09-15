@@ -1,0 +1,44 @@
+/***RESPONSIVE LAYOUT***/
+
+*{
+  box-sizing: border-box;
+}
+
+#my-box {
+  width: 80%;
+  padding: 30px;
+ 
+}
+
+
+/**INDEX PAGE**/
+main {
+  display: grid;
+  max-width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  grid-gap: 15px;  
+  margin: 5% auto; 
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/**CITY PAGE**/
+
+article {
+  display: grid;
+  max-width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  grid-gap: 15px;  
+  margin: 5% auto; 
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
