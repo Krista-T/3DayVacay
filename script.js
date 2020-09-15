@@ -12,7 +12,7 @@ data.feed.entry.forEach(city => {
     copy.querySelector("h1").textContent = city.gsx$city.$t;
     copy.querySelector("a").href = `city.html?city=${city.gsx$city.$t}`
 
-      //ADD IMAGES- ASK HELP
+      //ADD IMAGES
       copy.querySelector("img").setAttribute("src", "http://ssays.dk/kea/common_interest_images/" + city.gsx$heroimage.$t + ".jpg"); 
 
     document.querySelector("main").appendChild(copy)
