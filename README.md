@@ -1,2 +1,2 @@
-# 4DayVacay
+# 3DayVacay
 school project, dynamic web
