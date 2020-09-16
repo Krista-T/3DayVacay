@@ -7,6 +7,8 @@ fetch("https://spreadsheets.google.com/feeds/list/18QShemZlLoq2j6zasY3bNjFkoqkDb
 
 // THIS 'MIDDLE MAN'-FUNCTION LETS US CONTROL WHAT OTHER FUNCTIONS ARE CALLED
 function dataReceived(data) {
+    // I HIDE THE STUPID MODAL HERE, BECAUSE I DOESNT HIDE, IF I JUST ADD .hidden TO .modal-box IN HTML
+    document.querySelector(".modal-box").classList.add("hidden");
     showActivities(data);
     addFilters();
     addPreferences();
@@ -37,7 +39,7 @@ function addPreferences() {
 
 // LOOP THROUGH DATA AND CREATE INDVIDUAL ACTIVITIES FROM TEMPLATE
 function showActivities(data) {
-    console.log(data)
+    //console.log(data)
     data.feed.entry.forEach(city => {
         // CHECKING IF CITYNAME IN DATA MATCHES CITY IN URL
         if (city.gsx$city.$t == cityFromUrl) {
@@ -59,11 +61,34 @@ function showActivities(data) {
 
             // ADDING CLASSES FOR FILTERING - LOOK HERE KRIS!
             const article = copy.querySelector("article");
-            article.classList.add(city.gsx$filtertag.$t);
+            //FOR SOME REASON, THE FOLLOWING LINE DOESNT WORK WITH OTHER CITIES THAN COPENHAGEN?:
+            //article.classList.add(city.gsx$filtertag.$t);
             article.classList.add(city.gsx$activitytype.$t);
+
+            // ADDING EVENTLISTERNER TO OPEN MODAL
+            article.addEventListener("click", () => {
+                showModal(city);
+            });
 
             // APPEND TEMPLATE TO MAIN
             document.querySelector("main").appendChild(copy);
         }
+    })
+}
+
+function showModal(city) {
+    console.log("article clicked!");
+    console.log(city);
+    const modal = document.querySelector(".modal-box");
+    modal.querySelector(".modal-name").textContent = city.gsx$venuename.$t;
+    modal.querySelector(".modal-image").setAttribute("src", "http://ssays.dk/kea/common_interest_images/" + city.gsx$image.$t + ".jpg");
+    modal.querySelector(".modal-description").textContent = city.gsx$description.$t;
+    modal.querySelector(".modal-price").textContent = "Price: " + city.gsx$price.$t + " DKK";
+    modal.querySelector(".modal-address").textContent = "Address: " + city.gsx$location.$t;
+    modal.querySelector(".modal-hours").textContent = "Opening hours: " + city.gsx$location.$t;
+    // Un-hide the modal element
+    modal.classList.remove("hidden");
+    modal.addEventListener("click", () => {
+    modal.classList.add("hidden");
     })
 }
