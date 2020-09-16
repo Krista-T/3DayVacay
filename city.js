@@ -9,31 +9,39 @@ fetch("https://spreadsheets.google.com/feeds/list/18QShemZlLoq2j6zasY3bNjFkoqkDb
 function dataReceived(data) {
     showActivities(data);
     addFilters();
-    addPreferences();
+    // addPreferences();
 }
 // ADD FUNCTIONALITY TO FILTER BUTTONS - WORKING!
 function addFilters() {
     document.querySelectorAll(".filters button").forEach(button => {
         button.addEventListener("click", () => {
-            // console.log(button.dataset.filter);
+           
             document.querySelectorAll(`article:not(.${button.dataset.filter})`).forEach(article => {
+
+
                 article.classList.toggle("hidden");
+                console.log(article);
             });
         })
     })
 }
 
 // ADD FUNCTIONALITY TO PREFERENCE BUTTONS - NOT WORKING OPTIMALLY!
-function addPreferences() {
-    document.querySelectorAll(".preferences button").forEach(button => {
-        button.addEventListener("click", () => {
-            // console.log(button.dataset.filter);
-            document.querySelectorAll(`article.${button.dataset.filter})`, `article:not(.hidden)`).forEach(article => {
-                article.classList.toggle("hidden");
-            });
-        })
-    })
-}
+
+
+// function addPreferences() {
+//     document.querySelectorAll(".preferences button").forEach(button => {
+//         button.addEventListener("click", () => {
+//             console.log(button.dataset.filter);
+//             document.querySelectorAll(`article.${button.dataset.filter})`, `article:not(.hidden)`).forEach(article => {
+//                 article.classList.toggle("hidden2");
+//             });
+
+           
+
+//         })
+//     })
+// }
 
 // LOOP THROUGH DATA AND CREATE INDVIDUAL ACTIVITIES FROM TEMPLATE
 function showActivities(data) {
@@ -61,6 +69,9 @@ function showActivities(data) {
             // const article = copy.querySelector("article");
             // article.classList.add(city.gsx$filtertag.$t);
             // article.classList.add(city.gsx$activitytype.$t);
+
+           
+
 
             // APPEND TEMPLATE TO MAIN
             document.querySelector("main").appendChild(copy);

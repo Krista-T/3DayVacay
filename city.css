@@ -114,6 +114,8 @@ h2, h3, h4, p {
     
 }
 
-.hidden {
+
+/**HIDE FOR FILTERS WITHOUT INTERFERENCE**/
+.hidden, .hiden2 {
     display: none;
 }
