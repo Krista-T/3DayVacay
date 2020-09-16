@@ -13,7 +13,7 @@ function showCities(data) {
     if (city.gsx$city.$t == cityFromUrl) {
       const template = document.querySelector("template").content;
       const copy = template.cloneNode(true);
-      // copy.querySelector("h1").textContent = city.gsx$city.$t;
+    //  copy.querySelector("h1").textContent = city.gsx$city.$t;
 
       //CITY NAME
       copy.querySelector("a").href = `city.html?city=${city.gsx$city.$t}`
