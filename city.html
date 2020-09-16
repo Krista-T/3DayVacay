@@ -9,11 +9,42 @@
 </head>
 
 <body>
-    <header id="citypage-header">
-    <img class="logo" src="img/logo-white.svg" alt="" id="logo">
-    <div class="headerText">
-        <h1 class="city-name"></h1>
-        <h3></h3>
+    <header id="citypage-header" style="">
+        <img class="logo" src="img/logo-white.svg" alt="" id="logo">
+        <div class="headerText">
+            <h1 class="city-name"></h1>
+            <h3></h3>
+        </div>
+
+        <nav>
+            <ul class="top-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cities.html">Cities</a></li>
+                <li><a href="index.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="filters">Filters
+        <button data-filter="art">Art</button>
+        <button data-filter="food">Food</button>
+        <button data-filter="music">Music</button>
+    </div>
+    <div class="preferences">Your peferences
+        <button data-filter="rock">Rock</button>
+        <button data-filter="classical">Classical</button>
+        <button data-filter="jazz">Jazz</button>
+
+        <button data-filter="jazz">Local</button>
+        <button data-filter="spicy">Spicy</button>
+        <button data-filter="vegan">Vegan</button>
+
+        <button data-filter="modern">Modern</button>
+        <button data-filter="design">Design</button>
+        <button data-filter="oldschool">Oldschool</button>
+    </div>
+    <div id="sorting">Sort by
+        <button>Alphabetically</button>
+        <button>By Price</button>
     </div>
     <main></main>
 
