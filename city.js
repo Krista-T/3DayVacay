@@ -4,8 +4,12 @@ let cityFromUrl = params.get("city");
 
 fetch("https://spreadsheets.google.com/feeds/list/18QShemZlLoq2j6zasY3bNjFkoqkDb_tP7Tpjujma3mg/od6/public/values?alt=json")
     .then(res => res.json())
-    .then(showActivities)
+    .then(dataReceived);
 
+function dataReceived(data) {
+    showActivities(data);
+    addFilters(data);
+}
 
 function showActivities(data) {
     console.log(data)
@@ -21,13 +25,16 @@ function showActivities(data) {
             // CREATE SINGLE ACTIVTY TEMPLATE
             const template = document.querySelector("template").content;
             const copy = template.cloneNode(true);
-            //copy.querySelector("h1").textContent = city.gsx$city.$t;
 
             // POPULATE TEMPLATE WITH DATA
             copy.querySelector('h2').textContent = city.gsx$activitytype.$t;
             copy.querySelector('h3').textContent = city.gsx$venuename.$t;
             copy.querySelector('.headline').textContent = city.gsx$headline.$t;
             copy.querySelector("img").setAttribute("src", "http://ssays.dk/kea/common_interest_images/" + city.gsx$image.$t + ".jpg");
+
+            // ADDING CLASSES FOR FILTERING
+            const article = copy.querySelector("article");
+            article.classList.add(city.gsx$filtertag.$t);
 
             // APPEND TEMPLATE TO MAIN
             document.querySelector("main").appendChild(copy);
