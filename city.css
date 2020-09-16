@@ -1,0 +1,55 @@
+@import url(//db.onlinewebfonts.com/c/2f4b0e58eb39868d3fad42ed32abdd38?family=ActaPosterW01-Regular);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+/* main variables */
+:root {
+    --bg-color: #F2C166;
+    --link-color: #07B2D9;
+    --color-3: #0487D9;
+    --color-4: #BF6D4E;
+    --color-5: #D9320D;
+    --color-6: #6f6f6f;
+
+    --primary-font: 'Archivo Black', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --main-text-color: #000;
+
+    --white-space: 1rem;
+}
+a {
+    text-decoration: none;
+}
+
+main {
+  display: grid;
+  max-width: 75%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+  margin: 15% auto;
+
+}
+
+img {
+  max-width: 100%;
+  height: 20vw;
+}
+
+.activity {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px;
+    margin: 1vw;
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.activityText {
+    color: black;
+    font-family: var(--primary-font);
+    margin-left: 1vw;
+}
+
+h2, h3, h1, h4, p {
+    margin-bottom: 0;
+    margin-top: 0.5vw
+}
