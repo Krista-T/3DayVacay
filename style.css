@@ -1,3 +1,81 @@
+
+@import url(//db.onlinewebfonts.com/c/2f4b0e58eb39868d3fad42ed32abdd38?family=ActaPosterW01-Regular);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+/* main variables */
+:root {
+    --bg-color: #F2C166;
+    --link-color: #07B2D9;
+    --color-3: #0487D9;
+    --color-4: #BF6D4E;
+    --color-5: #D9320D;
+    --color-6: #6f6f6f;
+
+    --primary-font: 'Archivo Black', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --main-text-color: #000;
+
+    --white-space: 1rem;
+}
+
+
+/***HEADER&NAVIGATION***/
+
+#homepage-header {
+    background-image: url(https://lp-cms-production.imgix.net/2019-06/GettyImages-109726358_high.jpg?auto=format&fit=crop&ixlib=react-8.6.4&h=520&w=1280&q=50&dpr=2);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 20vw;
+    position: relative;
+
+
+}
+.logo {
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+    height: 10vw;
+}
+.headerText {
+    position: absolute;
+        top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: var(--primary-font);
+    color: var(--color-4);
+}
+
+
+.top-nav {
+    width: 100%;
+    padding-right: 40px;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    top: 0;
+}
+
+.top-nav li {
+    margin: 0 0 0 25px;
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    font-family: var(--primary-font);
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+
 /***RESPONSIVE LAYOUT***/
 
 *{
@@ -25,7 +103,23 @@ img {
   max-width: 100%;
   height: auto;
 }
+.citiesContainer {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px;
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
 
+.cityName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+}
 
 /**CITY PAGE**/
 
