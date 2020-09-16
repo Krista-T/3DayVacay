@@ -1,7 +1,6 @@
 let params = new URLSearchParams(document.location.search.substring(1));
 let cityFromUrl = params.get("city");
 
-
 fetch("https://spreadsheets.google.com/feeds/list/18QShemZlLoq2j6zasY3bNjFkoqkDb_tP7Tpjujma3mg/od6/public/values?alt=json")
     .then(res => res.json())
     .then(dataReceived);
@@ -12,24 +11,25 @@ function dataReceived(data) {
     addFilters();
     addPreferences();
 }
-
+// ADD FUNCTIONALITY TO FILTER BUTTONS - WORKING!
 function addFilters() {
     document.querySelectorAll(".filters button").forEach(button => {
         button.addEventListener("click", () => {
             // console.log(button.dataset.filter);
-            document.querySelectorAll(`article:not(.${button.dataset.filter})`, `article:not(.hidden)`).forEach(article => {
+            document.querySelectorAll(`article:not(.${button.dataset.filter})`).forEach(article => {
                 article.classList.toggle("hidden");
             });
         })
     })
 }
 
+// ADD FUNCTIONALITY TO PREFERENCE BUTTONS - NOT WORKING OPTIMALLY!
 function addPreferences() {
     document.querySelectorAll(".preferences button").forEach(button => {
         button.addEventListener("click", () => {
             // console.log(button.dataset.filter);
-            document.querySelectorAll(`article:not(.${button.dataset.filter})`).forEach(article => {
-                article.classList.add("hidden");
+            document.querySelectorAll(`article.${button.dataset.filter})`, `article:not(.hidden)`).forEach(article => {
+                article.classList.toggle("hidden");
             });
         })
     })
@@ -57,7 +57,7 @@ function showActivities(data) {
             copy.querySelector('.headline').textContent = city.gsx$headline.$t;
             copy.querySelector("img").setAttribute("src", "http://ssays.dk/kea/common_interest_images/" + city.gsx$image.$t + ".jpg");
 
-            // ADDING CLASSES FOR FILTERING
+            // ADDING CLASSES FOR FILTERING - LOOK HERE KRIS!
             const article = copy.querySelector("article");
             article.classList.add(city.gsx$filtertag.$t);
             article.classList.add(city.gsx$activitytype.$t);
