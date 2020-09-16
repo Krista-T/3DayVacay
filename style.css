@@ -19,7 +19,7 @@
 }
 
 
-/***HEADER&NAVIGATION***/
+/*** HEADER & NAVIGATION ***/
 
 #homepage-header {
     background-image: url(https://lp-cms-production.imgix.net/2019-06/GettyImages-109726358_high.jpg?auto=format&fit=crop&ixlib=react-8.6.4&h=520&w=1280&q=50&dpr=2);
@@ -28,15 +28,15 @@
     width: 100vw;
     height: 20vw;
     position: relative;
-
-
 }
+
 .logo {
     position: absolute;
     left: 1vw;
     top: 1vw;
     height: 10vw;
 }
+
 .headerText {
     position: absolute;
     top: 50%;
@@ -46,7 +46,6 @@
     font-family: var(--primary-font);
     color: var(--color-4);
 }
-
 
 .top-nav {
     width: 100%;
@@ -74,9 +73,7 @@ ul {
 }
 
 
-
-
-/***RESPONSIVE LAYOUT***/
+/*** RESPONSIVE LAYOUT ***/
 
 *{
   box-sizing: border-box;
