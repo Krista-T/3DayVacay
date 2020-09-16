@@ -6,11 +6,36 @@ fetch("https://spreadsheets.google.com/feeds/list/18QShemZlLoq2j6zasY3bNjFkoqkDb
     .then(res => res.json())
     .then(dataReceived);
 
+// THIS 'MIDDLE MAN'-FUNCTION LETS US CONTROL WHAT OTHER FUNCTIONS ARE CALLED
 function dataReceived(data) {
     showActivities(data);
-    addFilters(data);
+    addFilters();
+    addPreferences();
 }
 
+function addFilters() {
+    document.querySelectorAll(".filters button").forEach(button => {
+        button.addEventListener("click", () => {
+            // console.log(button.dataset.filter);
+            document.querySelectorAll(`article:not(.${button.dataset.filter})`, `article:not(.hidden)`).forEach(article => {
+                article.classList.toggle("hidden");
+            });
+        })
+    })
+}
+
+function addPreferences() {
+    document.querySelectorAll(".preferences button").forEach(button => {
+        button.addEventListener("click", () => {
+            // console.log(button.dataset.filter);
+            document.querySelectorAll(`article:not(.${button.dataset.filter})`).forEach(article => {
+                article.classList.add("hidden");
+            });
+        })
+    })
+}
+
+// LOOP THROUGH DATA AND CREATE INDVIDUAL ACTIVITIES FROM TEMPLATE
 function showActivities(data) {
     console.log(data)
     data.feed.entry.forEach(city => {
@@ -35,6 +60,7 @@ function showActivities(data) {
             // ADDING CLASSES FOR FILTERING
             const article = copy.querySelector("article");
             article.classList.add(city.gsx$filtertag.$t);
+            article.classList.add(city.gsx$activitytype.$t);
 
             // APPEND TEMPLATE TO MAIN
             document.querySelector("main").appendChild(copy);
