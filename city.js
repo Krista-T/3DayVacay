@@ -4,8 +4,8 @@ let cityFromUrl = params.get("city");
 fetch("https://spreadsheets.google.com/feeds/list/18QShemZlLoq2j6zasY3bNjFkoqkDb_tP7Tpjujma3mg/od6/public/values?alt=json")
     .then(res => res.json())
     .then(dataReceived);
-
-// THIS 'MIDDLE MAN'-FUNCTION LETS US CONTROL WHAT OTHER FUNCTIONS ARE CALLED
+7
+/ THIS 'MIDDLE MAN'-FUNCTION LETS US CONTROL WHAT OTHER FUNCTIONS ARE CALLED
 function dataReceived(data) {
     showActivities(data);
     addFilters();
