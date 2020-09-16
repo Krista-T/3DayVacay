@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="city.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="city.css">
 </head>
+
 <body>
     <header id="citypage-header" style="">
-    <img class="logo" src="img/logo-white.svg" alt="" id="logo">
-    <div class="headerText">
-        <h1 class="city-name"></h1>
-        <h3></h3>
+        <img class="logo" src="img/logo-white.svg" alt="" id="logo">
+        <div class="headerText">
+            <h1 class="city-name"></h1>
+            <h3></h3>
+        </div>
+
+        <nav>
+            <ul class="top-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cities.html">Cities</a></li>
+                <li><a href="index.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="filters">Filters
+        <button>Art</button>
+        <button>Food</button>
+        <button>Music</button>
     </div>
+    <div id="preferences">Your peferences
+        <button>Rock</button>
+        <button>Classical</button>
+        <button>Jazz</button>
 
-    <nav>
-        <ul class="top-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cities.html">Cities</a></li>
-            <li><a href="index.html">About</a></li>
-        </ul>
-    </nav>
-</header>
-  <main></main>
+        <button>Local</button>
+        <button>Spicy</button>
+        <button>Vegan</button>
 
-  <template>
-       <!-- <h1>City</h1>  -->
-      <article class = "activity">
-        <img  src= "http://ssays.dk/kea/common_interest_images/koncerhuset" alt="activity-img">
+        <button>Modern</button>
+        <button>Design</button>
+        <button>Oldschool</button>
+    </div>
+    <div id="sorting">Sort by
+        <button>Alphabetically</button>
+        <button>By Price</button>
+    </div>
+    <main></main>
 
-        <!--WE CAN PUT VENUE AS a tag LINK??-->
-        <a href=""></a>
-        <h2 class="activityText"></h2>
-        <h3></h3>
-        <p class ="headline"></p>
-        <p class="description"></p>
-      </article>
-  </template>
+    <template>
+        <!-- <h1>City</h1>  -->
+        <article class="activity">
+            <img src="http://ssays.dk/kea/common_interest_images/koncerhuset" alt="activity-img">
+
+            <!--WE CAN PUT VENUE AS a tag LINK??-->
+            <a href=""></a>
+            <h2 class="activityText"></h2>
+            <h3></h3>
+            <p class="headline"></p>
+            <p class="description"></p>
+        </article>
+    </template>
 
 </body>
-<script src = "city.js">
- 
+<script src="city.js">
+
 </script>
+
 </html>
