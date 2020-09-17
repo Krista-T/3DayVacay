@@ -10,11 +10,11 @@ function dataReceived(data) {
     // I HIDE THE STUPID MODAL HERE, BECAUSE I DOESNT HIDE, IF I JUST ADD .hidden TO .modal-box IN HTML
     document.querySelector(".modal-box").classList.add("hidden");
     showActivities(data);
-    addFilters();
+    //addFilters();
     addPreferences();
 }
 // ADD FUNCTIONALITY TO FILTER BUTTONS - WORKING!
-function addFilters() {
+/*function addFilters() {
     document.querySelectorAll(".filters button").forEach(button => {
         button.addEventListener("click", () => {
             // console.log(button.dataset.filter);
@@ -23,7 +23,53 @@ function addFilters() {
             });
         })
     })
+}*/
+// Upcoming code is doing the filtering of activities
+// TOGGLE ART
+const buttonArt = document.querySelector("button.art");
+buttonArt.addEventListener("click", toggleArt);
+function toggleArt() {
+    document.querySelectorAll("article").forEach(article => {
+        article.classList.remove("hidden");
+    })
+    document.querySelectorAll("article:not(.art)").forEach(article => {
+        article.classList.toggle("hidden");
+    })
 }
+
+// TOGGLE FOOD
+const buttonFood = document.querySelector("button.food");
+buttonFood.addEventListener("click", toggleFood);
+function toggleFood() {
+    document.querySelectorAll("article").forEach(article => {
+        article.classList.remove("hidden");
+    })
+    document.querySelectorAll("article:not(.food)").forEach(article => {
+        article.classList.toggle("hidden");
+    })
+}
+
+// TOGGLE MUSIC
+const buttonMusic = document.querySelector("button.music");
+buttonMusic.addEventListener("click", toggleMusic);
+function toggleMusic() {
+    document.querySelectorAll("article").forEach(article => {
+        article.classList.remove("hidden");
+    })
+    document.querySelectorAll("article:not(.music)").forEach(article => {
+        article.classList.toggle("hidden");
+    })
+}
+
+// REMOVE FILTERS
+const removeFilters = document.querySelector("button.removeFilters");
+removeFilters.addEventListener("click", eraseFilters);
+function eraseFilters() {
+    document.querySelectorAll("article").forEach(article => {
+        article.classList.remove("hidden");
+    })
+}
+
 
 // ADD FUNCTIONALITY TO PREFERENCE BUTTONS - NOT WORKING OPTIMALLY!
 function addPreferences() {
@@ -89,6 +135,6 @@ function showModal(city) {
     // Un-hide the modal element
     modal.classList.remove("hidden");
     modal.addEventListener("click", () => {
-    modal.classList.add("hidden");
+        modal.classList.add("hidden");
     })
 }
