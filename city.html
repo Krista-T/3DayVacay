@@ -24,11 +24,19 @@
             </ul>
         </nav>
     </header>
-    <div class="filters">Filters
+    <img class="main-img-city">
+    <nav class="filters">
+        <ul>
+            <li><a data-filter="art">Art</a></li>
+            <li><a data-filter="food">Food</a></li>
+            <li><a data-filter="music">Music</a></li>
+        </ul>
+    </nav>
+    <!--<div class="filters">Filters
         <button data-filter="art">Art</button>
         <button data-filter="food">Food</button>
         <button data-filter="music">Music</button>
-    </div>
+    </div>-->
     <div class="preferences">Your peferences
         <button data-filter="rock">Rock</button>
         <button data-filter="classical">Classical</button>
@@ -46,7 +54,7 @@
         <button>Alphabetically</button>
         <button>By Price</button>
     </div>
-    <img class="main-img-city">
+
     <main>
         <div class="modal-box">
             <div class="modal-content">
@@ -66,17 +74,18 @@
             <img src="http://ssays.dk/kea/common_interest_images/koncerhuset" alt="activity-img">
 
             <!--WE CAN PUT VENUE AS a tag LINK??-->
-            <a href=""></a>
+            <div class="activity-details">
+                <a href=""></a>
             <h2 class="activityText"></h2>
             <h3></h3>
             <p class="headline"></p>
             <p class="description"></p>
+            </div>
+
         </article>
     </template>
 
 </body>
 <script src="city.js">
 
-</script>
-
-</html>
+</script></html>

@@ -15,7 +15,7 @@ function dataReceived(data) {
 }
 // ADD FUNCTIONALITY TO FILTER BUTTONS - WORKING!
 function addFilters() {
-    document.querySelectorAll(".filters button").forEach(button => {
+    document.querySelectorAll(".filters li").forEach(button => {
         button.addEventListener("click", () => {
             // console.log(button.dataset.filter);
             document.querySelectorAll(`article:not(.${button.dataset.filter})`).forEach(article => {
