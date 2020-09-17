@@ -259,7 +259,7 @@ activity-details h3{
     text-align: left;
 }
 /* activity*/
-<<<<<<< HEAD
+
 /* flexbox preferences and sorting*/
 .filter-container2{
     display: flex;
@@ -366,34 +366,13 @@ h2, h4, p {
 h3{
         font-family: var(--secondary-font);
 }
-.modal-box {
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
-}
 
-.modal-content {
-  background-color: #fefefe;
-  border: 1px solid #7c1f17;
-  margin: 1em;
-  padding: 2em;
-}
-
-.modal-content img {
-    align-items: center;
-    width: 20%;
-    height: auto;
-}
 
 .hidden {
     display: none;
 }
 /* city.css*/
-=======
+
 
 
 .modal-box {
@@ -445,4 +424,4 @@ h3{
     font-weight: 100;
 
 }
->>>>>>> origin/master
+
