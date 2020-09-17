@@ -26,8 +26,7 @@
     position: absolute;
     left: 1vw;
     top: 1vw;
-
-    height: 87px;
+ height: 8vw;
     padding: 1vw;
 
 }
@@ -53,6 +52,7 @@ a {
     text-decoration: none;
     color: white;
     font-family: var(--secondary-font);
+    font-size: 1.5vw;
 }
 
 ul {
