@@ -123,7 +123,7 @@ img {
 }
 
 
-.headerText {
+#homepage-header .headerText {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -132,14 +132,14 @@ img {
     font-family: var(--primary-font);
     color: white;
 }
-h1 {
+#homepage-header h1 {
     font-size: 3rem;
     font-weight: 600;
     line-height: auto;
     font-family: var(--secondary-font);
 }
 
-h3 {
+#homepage-header h3 {
     font-size: 1rem;
     line-height: auto;
     font-family: var(--secondary-font);
@@ -181,5 +181,78 @@ footer .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 100%;
 }
+
+/* filters menu */
+.filters {
+    text-align: center;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.filters ul {
+    text-align: center;
+    display: flex;
+    background-color: var(--bg-color);
+
+    width: 100%;
+    padding: 0vw 0vw 0vw 0vw;
+    align-content: space-between;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+.active-menu {
+    position: fixed;
+    top: 0;
+}
+
+.filters li {
+    padding: 3vw 3vw 2vw 3vw;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    color: white;
+}
+
+.filters li:active {
+    color: black;
+    background-color: red;
+}
+.active{
+    background-color: red;
+}
+
+.filters li:hover {
+    color: black;
+    background-color: var(--color-3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+.filters a {
+    color: white;
+}
+/* filters menu */
+/* activity*/
+.activity-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+.activityImg{
+
+    width: 30px;
+    height: 30px;
+    margin-left: 5vw;
+}
+.headline{
+   justify-self: start;
+    grid-area: 1/-1;
+}
+/* activity*/

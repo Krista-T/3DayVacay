@@ -26,8 +26,8 @@
 #citypage-header {
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 20vw;
+    width: 100%;
+    height: 12vw;
     position: relative;
 }
 
@@ -38,15 +38,16 @@
     height: 10vw;
 }
 
-.headerText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#citypage-header .headerText {
+ font-size: 2vw;
+    font-weight: 200;
     text-align: center;
+    line-height: 1.375;
     font-family: var(--primary-font);
-    color: var(--color-4);
+    padding-top: 1vw;
+    color: black;
 }
+
 
 .top-nav {
     width: 100%;
@@ -62,7 +63,12 @@
     list-style-type: none;
 
 }
+.top-nav a{
+    text-decoration: none;
+    color:black;
+    font-family: var(--secondary-font);
 
+}
 a {
     text-decoration: none;
     color:white;
@@ -110,8 +116,8 @@ img {
 h2, h3, h4, p {
   text-align: center;
     margin-bottom: 0;
-    margin-top: 0.5vw
-    
+    margin-top: 0.5vw;
+    font-family: var(--secondary-font);
 }
 
 .modal-box {
@@ -141,6 +147,5 @@ h2, h3, h4, p {
     display: none;
 }
 
-.hidden2 {
-    display: none;
-}
+
+

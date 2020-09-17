@@ -14,8 +14,13 @@ function dataReceived(data) {
     addPreferences();
 }
 // ADD FUNCTIONALITY TO FILTER BUTTONS - WORKING!
+
 /*function addFilters() {
     document.querySelectorAll(".filters button").forEach(button => {
+=======
+function addFilters() {
+    document.querySelectorAll(".filters li").forEach(button => {
+>>>>>>> activitycss
         button.addEventListener("click", () => {
             // console.log(button.dataset.filter);
             document.querySelectorAll(`article:not(.${button.dataset.filter})`).forEach(article => {
@@ -26,7 +31,7 @@ function dataReceived(data) {
 }*/
 // Upcoming code is doing the filtering of activities
 // TOGGLE ART
-const buttonArt = document.querySelector("button.art");
+const buttonArt = document.querySelector(".filters li .art");
 buttonArt.addEventListener("click", toggleArt);
 function toggleArt() {
     document.querySelectorAll("article").forEach(article => {
@@ -38,7 +43,7 @@ function toggleArt() {
 }
 
 // TOGGLE FOOD
-const buttonFood = document.querySelector("button.food");
+const buttonFood = document.querySelector(".filters li .food");
 buttonFood.addEventListener("click", toggleFood);
 function toggleFood() {
     document.querySelectorAll("article").forEach(article => {
@@ -50,7 +55,7 @@ function toggleFood() {
 }
 
 // TOGGLE MUSIC
-const buttonMusic = document.querySelector("button.music");
+const buttonMusic = document.querySelector(".filters li .music");
 buttonMusic.addEventListener("click", toggleMusic);
 function toggleMusic() {
     document.querySelectorAll("article").forEach(article => {
@@ -62,7 +67,7 @@ function toggleMusic() {
 }
 
 // REMOVE FILTERS
-const removeFilters = document.querySelector("button.removeFilters");
+const removeFilters = document.querySelector(".filters li .removeFilters");
 removeFilters.addEventListener("click", eraseFilters);
 function eraseFilters() {
     document.querySelectorAll("article").forEach(article => {
@@ -100,7 +105,8 @@ function showActivities(data) {
             const copy = template.cloneNode(true);
 
             // POPULATE TEMPLATE WITH DATA
-            copy.querySelector('h2').textContent = city.gsx$activitytype.$t;
+            //copy.querySelector('h2').textContent = city.gsx$activitytype.$t;
+         copy.querySelector(".activityImg").setAttribute("src", "img/" +city.gsx$activitytype.$t+ ".svg");
             copy.querySelector('h3').textContent = city.gsx$venuename.$t;
             copy.querySelector('.headline').textContent = city.gsx$headline.$t;
             copy.querySelector("img").setAttribute("src", "http://ssays.dk/kea/common_interest_images/" + city.gsx$image.$t + ".jpg");
