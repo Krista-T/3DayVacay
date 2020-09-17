@@ -85,7 +85,7 @@ function showModal(city) {
     modal.querySelector(".modal-description").textContent = city.gsx$description.$t;
     modal.querySelector(".modal-price").textContent = "Price: " + city.gsx$price.$t + " DKK";
     modal.querySelector(".modal-address").textContent = "Address: " + city.gsx$location.$t;
-    modal.querySelector(".modal-hours").textContent = "Opening hours: " + city.gsx$location.$t;
+    modal.querySelector(".modal-hours").textContent = "Opening hours: " + city.gsx$workinghours.$t;
     // Un-hide the modal element
     modal.classList.remove("hidden");
     modal.addEventListener("click", () => {
