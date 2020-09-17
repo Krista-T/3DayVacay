@@ -39,7 +39,7 @@
 }
 
 #citypage-header .headerText {
- font-size: 2vw;
+    font-size: 2vw;
     font-weight: 200;
     text-align: center;
     line-height: 1.375;
@@ -63,15 +63,17 @@
     list-style-type: none;
 
 }
-.top-nav a{
+
+.top-nav a {
     text-decoration: none;
-    color:black;
+    color: black;
     font-family: var(--secondary-font);
 
 }
+
 a {
     text-decoration: none;
-    color:white;
+    color: white;
     font-family: var(--primary-font);
 }
 
@@ -83,17 +85,17 @@ ul {
 /*** RESPONSIVE LAYOUT ***/
 
 main {
-  display: grid;
-  max-width: 75%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  grid-gap: 15px;  
-   margin: 5% auto;  
-  
+    display: grid;
+    max-width: 75%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 15px;
+    margin: 5% auto;
+
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .activity {
@@ -113,39 +115,66 @@ img {
     margin-left: 1vw;
 }
 
-h2, h3, h4, p {
-  text-align: center;
+h2,
+h3,
+h4,
+p {
+    text-align: center;
     margin-bottom: 0;
     margin-top: 0.5vw;
     font-family: var(--secondary-font);
 }
 
 .modal-box {
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .modal-content {
-  background-color: #fefefe;
-  border: 1px solid #7c1f17;
-  margin: 1em;
-  padding: 2em;
+    background-color: var(--bg-color);
+    margin: 5vw;
+    padding: 2em;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto auto;
 }
 
-.modal-content img {
-    align-items: center;
-    width: 20%;
+.modal-name {
+    font-size: 3vw;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.modal-image {
+    width: 70%;
+    margin: auto;
+    padding: 1vw;
     height: auto;
+    display: block;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.modal-description {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 2vw;
+    text-align: left;
+    padding-left: 1vw;
+}
+.modal-details {
+   grid-area: 3 / 1 / 4 / 3;
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5vw;
+    font-weight: 100;
+
 }
 
 .hidden {
     display: none;
 }
-
-
-
