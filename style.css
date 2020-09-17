@@ -123,7 +123,7 @@ img {
 }
 
 
-.headerText {
+#homepage-header .headerText {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -132,14 +132,14 @@ img {
     font-family: var(--primary-font);
     color: white;
 }
-h1 {
+#homepage-header h1 {
     font-size: 3rem;
     font-weight: 600;
     line-height: auto;
     font-family: var(--secondary-font);
 }
 
-h3 {
+#homepage-header h3 {
     font-size: 1rem;
     line-height: auto;
     font-family: var(--secondary-font);
