@@ -52,7 +52,7 @@ a {
     text-decoration: none;
     color: white;
     font-family: var(--secondary-font);
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 
 ul {
@@ -241,18 +241,154 @@ footer .logo {
 /* filters menu */
 /* activity*/
 .activity-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+
+    margin: 1vw;
 }
 .activityImg{
 
     width: 30px;
     height: 30px;
-    margin-left: 5vw;
+    float: right;
 }
 .headline{
-   justify-self: start;
-    grid-area: 1/-1;
+text-align: left;
+    margin: auto;
+}
+activity-details h3{
+    margin: auto;
+    text-align: left;
 }
 /* activity*/
+/* flexbox preferences and sorting*/
+.filter-container2{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+/* city.css*/
+#citypage-header {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 12vw;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+    height: 10vw;
+}
+
+#citypage-header .headerText {
+ font-size: 2vw;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.375;
+    font-family: var(--primary-font);
+    padding-top: 1vw;
+    color: black;
+}
+
+
+.top-nav {
+    width: 100%;
+    padding-right: 40px;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    top: 0;
+}
+
+.top-nav li {
+    margin: 0 0 0 25px;
+    list-style-type: none;
+
+}
+.top-nav a{
+    text-decoration: none;
+    color:black;
+    font-family: var(--secondary-font);
+
+}
+a {
+    text-decoration: none;
+    color:white;
+    font-family: var(--primary-font);
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/*** RESPONSIVE LAYOUT ***/
+
+main {
+  display: grid;
+  max-width: 75%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+   margin: 5% auto;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.activity {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px;
+    margin: 1vw;
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.activityText {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--primary-font);
+    margin-left: 1vw;
+}
+
+h2, h4, p {
+  text-align: center;
+    margin-bottom: 0;
+    margin-top: 0.5vw;
+    font-family: var(--secondary-font);
+}
+h3{
+        font-family: var(--secondary-font);
+}
+.modal-box {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}
+
+.modal-content img {
+    align-items: center;
+    width: 20%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+/* city.css*/
