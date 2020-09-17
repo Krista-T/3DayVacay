@@ -47,7 +47,7 @@ function showActivities(data) {
             // SET HEADER H1 TO CITY NAME
             document.querySelector(".city-name").textContent = city.gsx$city.$t;
             // SET HEADER BACKGROUND IMAGE TO CITY HERO IMAGE
-            document.querySelector("header").setAttribute("style", "background-image: url(http://ssays.dk/kea/common_interest_images/headers/" + city.gsx$heroimage.$t + ".jpg);")
+            document.querySelector(".main-img-city ").setAttribute("src", "http://ssays.dk/kea/common_interest_images/headers/" + city.gsx$heroimage.$t + ".jpg")
 
             // CREATE SINGLE ACTIVTY TEMPLATE
             const template = document.querySelector("template").content;
