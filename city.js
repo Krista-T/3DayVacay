@@ -54,7 +54,8 @@ function showActivities(data) {
             const copy = template.cloneNode(true);
 
             // POPULATE TEMPLATE WITH DATA
-            copy.querySelector('h2').textContent = city.gsx$activitytype.$t;
+            //copy.querySelector('h2').textContent = city.gsx$activitytype.$t;
+         copy.querySelector(".activityImg").setAttribute("src", "img/" +city.gsx$activitytype.$t+ ".svg");
             copy.querySelector('h3').textContent = city.gsx$venuename.$t;
             copy.querySelector('.headline').textContent = city.gsx$headline.$t;
             copy.querySelector("img").setAttribute("src", "http://ssays.dk/kea/common_interest_images/" + city.gsx$image.$t + ".jpg");

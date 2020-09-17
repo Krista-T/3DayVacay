@@ -241,7 +241,17 @@ footer .logo {
 /* activity*/
 .activity-details {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+.activityImg{
+
+    width: 30px;
+    height: 30px;
+    margin-left: 5vw;
+}
+.headline{
+   justify-self: start;
+    grid-area: 1/-1;
 }
 /* activity*/
