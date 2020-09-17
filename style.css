@@ -1,4 +1,3 @@
-
 @import url(//db.onlinewebfonts.com/c/2f4b0e58eb39868d3fad42ed32abdd38?family=ActaPosterW01-Regular);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
@@ -21,6 +20,97 @@
 
 /*** HEADER & NAVIGATION ***/
 
+
+
+.logo {
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+ height: 8vw;
+    padding: 1vw;
+
+}
+
+
+
+
+.top-nav {
+    width: 100%;
+    padding-right: 40px;
+    height: 35px;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+}
+
+.top-nav li {
+    margin: 0 0 0 25px;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--secondary-font);
+    font-size: 1.5vw;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*** HEADER & NAVIGATION ***/
+
+/*** RESPONSIVE LAYOUT ***/
+
+* {
+    box-sizing: border-box;
+}
+
+#my-box {
+    width: 80%;
+    padding: 30px;
+
+}
+
+
+/**INDEX PAGE**/
+main {
+    display: grid;
+    max-width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 15px;
+    margin: 5% auto;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background-size: cover;
+}
+
+.citiesContainer {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px;
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.cityName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+}
+
+/* header text */
 #homepage-header {
     background-image: url(https://lp-cms-production.imgix.net/2019-06/GettyImages-109726358_high.jpg?auto=format&fit=crop&ixlib=react-8.6.4&h=520&w=1280&q=50&dpr=2);
     background-size: 100%;
@@ -28,14 +118,10 @@
     width: 100vw;
     height: 20vw;
     position: relative;
+    background-size: cover;
+    min-height: 200px;
 }
 
-.logo {
-    position: absolute;
-    left: 1vw;
-    top: 1vw;
-    height: 10vw;
-}
 
 .headerText {
     position: absolute;
@@ -44,79 +130,56 @@
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: var(--primary-font);
-    color: var(--color-4);
+    color: white;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: auto;
+    font-family: var(--secondary-font);
 }
 
-.top-nav {
-    width: 100%;
-    padding-right: 40px;
+h3 {
+    font-size: 1rem;
+    line-height: auto;
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    margin-top: -2vw;
+}
+
+/* header text */
+p {
+    font-size: 0.75rem;
+    font-family: var(--secondary-font);
+}
+/* Footer */
+footer {
+    background-color: var(--color-4);
     display: flex;
-    position: absolute;
-    justify-content: flex-end;
-    top: 0;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 100%;
 }
-
-.top-nav li {
-    margin: 0 0 0 25px;
-    list-style-type: none;
-
+footer p {
+    padding: 5vw;
+    line-height: 5vw;
+    color: white;
 }
-
-a {
-    text-decoration: none;
-    color:white;
-    font-family: var(--primary-font);
+footer .logo {
+    padding: 6.5vw;
+    height: auto;
+    position: relative;
 }
-
-ul {
-    list-style-type: none;
+/* Footer */
+.cityContent{
+    background-color: black;
 }
-
-
-/*** RESPONSIVE LAYOUT ***/
-
-*{
-  box-sizing: border-box;
+.cityContent img{
+    opacity: 70%
 }
-
-#my-box {
-  width: 80%;
-  padding: 30px;
- 
+.main-img-city {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
-
-
-/**INDEX PAGE**/
-main {
-  display: grid;
-  max-width: 90%;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
-  grid-gap: 15px;  
-  margin: 5% auto; 
-  
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.citiesContainer {
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px;
-  border-radius: 16px;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-}
-
-.cityName {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: whitesmoke;
-  text-transform: uppercase;
-  font-family: var(--primary-font);
-  font-size: 1.6rem;
-}
-
