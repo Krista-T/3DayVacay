@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="city.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,22 +34,24 @@
         </ul>
     </nav>
 
-    <div class="preferences">Your peferences
-        <button data-filter="rock">Rock</button>
-        <button data-filter="classical">Classical</button>
-        <button data-filter="jazz">Jazz</button>
+    <div class="filter-container2">
+        <div class="preferences">Your peferences
+            <button data-filter="rock">Rock</button>
+            <button data-filter="classical">Classical</button>
+            <button data-filter="jazz">Jazz</button>
 
-        <button data-filter="jazz">Local</button>
-        <button data-filter="spicy">Spicy</button>
-        <button data-filter="vegan">Vegan</button>
+            <button data-filter="jazz">Local</button>
+            <button data-filter="spicy">Spicy</button>
+            <button data-filter="vegan">Vegan</button>
 
-        <button data-filter="modern">Modern</button>
-        <button data-filter="design">Design</button>
-        <button data-filter="oldschool">Oldschool</button>
-    </div>
-    <div id="sorting">Sort by
-        <button>Alphabetically</button>
-        <button>By Price</button>
+            <button data-filter="modern">Modern</button>
+            <button data-filter="design">Design</button>
+            <button data-filter="oldschool">Oldschool</button>
+        </div>
+        <div id="sorting">Sort by
+            <button>Alphabetically</button>
+            <button>By Price</button>
+        </div>
     </div>
 
     <main>
@@ -75,7 +76,7 @@
 
             <div class="activity-details">
                 <h3></h3>
-                <img class="activityImg">
+                <img class="activityImg"><br>
                 <p class="headline"></p>
             </div>
 
@@ -83,6 +84,11 @@
     </template>
 
 </body>
+<footer>
+    <img class="logo" src="img/logo-white.svg" alt="Logo" href="index.html">
+    <p>2sem, Dynamic Web <br>Group Project KEA</p>
+    <p>3DayVacay.dk ©</p>
+</footer>
 <script src="city.js">
 
 </script></html>
