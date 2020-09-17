@@ -40,6 +40,7 @@ function toggleArt() {
     document.querySelectorAll("article:not(.art)").forEach(article => {
         article.classList.toggle("hidden");
     })
+    document.querySelector(".filters li .art").classList.toggle("test");
 }
 
 // TOGGLE FOOD
@@ -52,6 +53,7 @@ function toggleFood() {
     document.querySelectorAll("article:not(.food)").forEach(article => {
         article.classList.toggle("hidden");
     })
+        document.querySelector(".filters li .food").classList.toggle("test");
 }
 
 // TOGGLE MUSIC
